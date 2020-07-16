@@ -15,10 +15,19 @@
     </nav>
     <header class="main-header">
         <form class="needs-validation" novalidate>
-            <div> 
+            <div onload="onloadPage();">  
                 <div class="col-md-5 m-auto">
                     <div class="card card-body">
                         <div class="container">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Identificación" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Solo números
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="character" placeholder="Nombres" value="" maxlength="25" required>
                                 <div class="valid-feedback">
@@ -39,15 +48,18 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="direction" placeholder="Dirección" maxlength="45" required>
-                                <div class="valid-feedback">
-                                    ¡Ok!
-                                </div>
-                                <div class="invalid-feedback" id="inv">
-                                    Por favor ingrese una dirección empezando con: "cll", "cra", "av", "anv", "trans",
+                                <div class="invalid-feedback">
+                                    Por favor ingrese una dirección empezando con: "cll", "cra", "av", "anv", "trans".
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"  placeholder="Nombre de Usuario" maxlength="20" required>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor ingrese un Nombre de Usuario.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <select class="custom-select" id="id_pais" required>
@@ -287,12 +299,30 @@
                                     <option value="ZM">Zambia</option>
                                     <option value="ZW">Zimbabue</option>
                                 </select>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor seleccione un país.
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control"  placeholder="E-mail" maxlength="120" required>
+                                <input type="email" class="form-control"  placeholder="E-mail" maxlength="120" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor ingrese un E-mail como el siguiente "ejemplo@ejemplo.dominio".
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Telefono" maxlength="20" required>
+                                <input type="text" class="form-control"  placeholder="Telefono" maxlength="20" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Solo números.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" id="pass" placeholder="Contraseña"  maxlength="20" required>
@@ -302,14 +332,23 @@
                             </div> 
                             <div class="form-group">
                                 <input type="password" class="form-control" id="confirmpass" placeholder="Confirmar Contraseña"  maxlength="20" required>
-                                <div class="valid-feedback" id="passok" style="display: none;">
+                                <div class="valid-feedback">
                                     ¡Ok!
                                 </div>
-                                <div id="pass-feedback" style="width: 100%; color: #dc3545; display: none;">
-                                    Las contraseñas deben ser las mismas.
+                                <div class="invalid-feedback">
+                                    Las contraseñas deben ser iguales.
                                 </div>
                             </div> 
-                           
+                            <label for="customRange2">Rango de Precios</label>
+                            <input type="range" class="custom-range"id="customRange2">
+                            <ul class=" list-group list-group-horizontal">
+                                <li class="list-group-item">Min-10M</li>
+                                <li class="list-group-item">30M</li>
+                                <li class="list-group-item">80M</li>
+                                <li class="list-group-item">100M</li>
+                                <li class="list-group-item">250M-Max</li>
+                              </ul>
+                           <br><br>
                         </div>
                         <button type="submit" class="btn btn-dark">Registrarse</button>
                     </div>
