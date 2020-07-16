@@ -30,6 +30,7 @@ function VerMas() {
         element.style.display='none';
     }
 }
+
 function PassValidation(){
 	var pass = document.getElementById("pass");
     var passconfirm = document.getElementById("confirmpass");
@@ -38,5 +39,14 @@ function PassValidation(){
     } else {
         document.getElementById("invalid-pass").style.display = "block";
         passconfirm.value = '';
+    }
+}
+function PassValidationChar(){
+	var pass = document.getElementById("pass");
+    if (pass.value.length >= 15 && pass.value.length <= 20) {
+        document.getElementById("invalid-pass-char").style.display = "none";
+    } else {
+        document.getElementById("invalid-pass-char").style.display = "block";
+        pass.value = '';
     }
 }
