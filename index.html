@@ -15,7 +15,7 @@
     </nav>
     <header class="main-header">
         <form class="needs-validation" novalidate>
-            <div onload="onloadPage();">  
+            <div>  
                 <div class="col-md-5 m-auto">
                     <div class="card card-body">
                         <div class="container">
@@ -47,8 +47,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="direction" placeholder="Dirección" maxlength="45" required>
-                                <div class="invalid-feedback">
+                                <input type="text" class="form-control" id="address" placeholder="Dirección" maxlength="45" onchange="javascrip:AddressValidation()" required>
+                                <div id="invalid-address" style="font-size: small; color: #dc3545; display: none;">
                                     Por favor ingrese una dirección empezando con: "cll", "cra", "av", "anv", "trans".
                                 </div>
                             </div>
