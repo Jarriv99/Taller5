@@ -6,3 +6,15 @@
     margin: auto;
     color: #ecf0f1;
 }
+body{
+    background: url(fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.card-body{
+    background: url(fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    border-color: #0984e3;
+    
+}

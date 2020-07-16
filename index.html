@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="Registro.css">
 </head>
 <body>
-    <nav class="navbar bg-secondary">
+    <nav class="navbar bg-primary">
             <h2 class="h2" >REGISTRO DE USUARIO</h2>
     </nav>
     <header class="main-header">
@@ -349,8 +349,90 @@
                                 <li class="list-group-item">250M-Max</li>
                               </ul>
                            <br><br>
-                        </div>
-                        <button type="submit" class="btn btn-dark">Registrarse</button>
+                           <b>Ver más...</b>
+                           <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()"/>
+                           <div id="content" style="display: none;"></br>
+                            <div class="form-group">
+                                <select class="custom-select" required>
+                                    <option selected disabled value="">Escoja el color de auto de preferencia</option>
+                                    <option value="Wh">Blanco</option>
+                                    <option value="Bl">Negro</option>
+                                    <option value="Sl">Plata</option>
+                                    <option value="Gr">Gris</option>
+                                    <option value="Ble">Azul</option>
+                                    <option value="Rd">Rojo</option>
+                                    <option value="Bg">Beige</option>
+                                    <option value="Yw">Amarillo</option>
+                                    <option value="Gn">Verde</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor seleccione un color.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select" required>
+                                    <option selected disabled value="">Escoja la marca de auto de preferencia</option>
+                                    <option value="CH">CHEVROLET</option>
+                                    <option value="RE">RENAULT</option>
+                                    <option value="NI">NISSAN</option>
+                                    <option value="MA">MAZDA</option>
+                                    <option value="KIA">KIA</option>
+                                    <option value="TO">TOYOTA</option>
+                                    <option value="VO">VOLKSWAGEN</option>
+                                    <option value="FO">FORD</option>
+                                    <option value="SU">SUZUKI</option>
+                                    <option value="HY">HYUNDAI</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor seleccione un color.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select" required>
+                                    <option selected disabled value="">Escoja un estilo de auto de preferencia</option>
+                                    <option value="dep">Deportivo</option>
+                                    <option value="tt">Todoterreno</option>
+                                    <option value="cc">CityCar</option>
+                                    <option value="Sed">Sedán</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor seleccione un color.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select" required>
+                                    <option selected disabled value="">Escoja un modelo de auto de preferencia</option>
+                                    <option value="older">Anterior</option>
+                                    <option value="012">2012</option>
+                                    <option value="013">2013</option>
+                                    <option value="014">2014</option>
+                                    <option value="015">2015</option>
+                                    <option value="016">2016</option>
+                                    <option value="017">2017</option>
+                                    <option value="018">2018</option>
+                                    <option value="019">2019</option>
+                                    <option value="020">2020</option>
+                                </select>
+                                <div class="valid-feedback">
+                                    ¡Ok!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor seleccione un color.
+                                </div>
+                            </div>
+                            <br><br>
+                          </div>
+                        </div><br><br>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
                     </div>
                 </div>
             </div>
