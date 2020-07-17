@@ -20,45 +20,48 @@
                     <div class="card card-body">
                         <div class="container">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Identificación" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                                <input type="text" class="form-control" placeholder="Identificación" title="Solo Números" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
                                 <div class="valid-feedback">
                                     ¡Ok!
                                 </div>
                                 <div class="invalid-feedback">
-                                    Solo números
+                                    Este campo no puede estar vacio.
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="character" placeholder="Nombres" value="" maxlength="25" required>
-                                <div class="valid-feedback">
-                                    ¡Ok!
+                                <div class="form-group" onchange="javascript:ValidationName()">
+                                    <input type="text" class="form-control" id="name" placeholder="Nombres" value=""  required>
+                                    <div id="invalid-name" style="font-size: small; color: #dc3545; display: none;">
+                                        Por favor ingrese un nombre no mayor a 25 caracteres.
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Este campo no puede estar vacio.
+                                    </div>
                                 </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese un nombre no mayor a 25 caracteres.
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="lastname"  placeholder="Apellidos"    onchange="javascript:ValidationLN()" required>
+                                    <div id="invalid-lastname" style="font-size: small; color: #dc3545; display: none;">
+                                        Por favor ingrese un apellido no mayor a 25 caracteres.
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Este campo no puede estar vacio.
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="character"  placeholder="Apellidos" maxlength="25" required>
-                                <div class="valid-feedback">
-                                    ¡Ok!
-                                </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese un apellido no mayor a 25 caracteres.
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="address" placeholder="Dirección" maxlength="45" onchange="javascript:AddressValidation()" required>
                                 <div id="invalid-address" style="font-size: small; color: #dc3545; display: none;">
                                     Por favor ingrese una dirección empezando con: "cll", "cra", "av", "anv", "trans".
                                 </div>
+                                <div class="invalid-feedback">
+                                    Este campo no puede estar vacio.
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Nombre de Usuario" maxlength="20" required>
-                                <div class="valid-feedback">
-                                    ¡Ok!
+                                <input type="text" class="form-control" id="UN" placeholder="Nombre de Usuario"   onchange="javascript:UserName()" required>
+                                <div id="invalid-UN" style="font-size: small; color: #dc3545; display: none;">
+                                    Por favor ingrese un Nombre de Usuario de minimo 10 letras y maximo 20.
                                 </div>
                                 <div class="invalid-feedback">
-                                    Por favor ingrese un Nombre de Usuario.
+                                    Este campo no puede estar vacio.
                                 </div>
                             </div>
                             <div class="form-group">
@@ -316,26 +319,32 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Telefono" maxlength="20" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                                <input type="text" class="form-control"  placeholder="Telefono" maxlength="20" title="Solo Números" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
                                 <div class="valid-feedback">
                                     ¡Ok!
                                 </div>
                                 <div class="invalid-feedback">
-                                    Solo números.
+                                    Este campo no puede estar vacio.
                                 </div>
                             </div>
                             <div onchange="javascript:PassValidation(), PassValidationChar()">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="pass" placeholder="Contraseña" minlength="15" maxlength="20" required>
+                                    <input type="password" class="form-control" id="pass" placeholder="Contraseña"  required>
                                     <div id="invalid-pass-char" style="font-size: small; color: #dc3545; display: none;">
                                         Por favor ingrese una contraseña entre 15 y 20 caracteres
                                     </div>
+                                    <div class="invalid-feedback">
+                                        Este campo no puede estar vacio.
+                                    </div>
                                 </div> 
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="confirmpass" placeholder="Confirmar Contraseña"  maxlength="20" required>
+                                    <input type="password" class="form-control" id="confirmpass" placeholder="Confirmar Contraseña"   required>
                                     <div id="invalid-pass" style="font-size: small; color: #dc3545; display: none;">
                                         Las contraseñas deben ser iguales.
                                     </div>
+                                    <!-- <div id="invalid-pass2" style="font-size: small; color: #dc3545; display: none;">
+                                        La contraseña debe contener al menos un número y un caracter especial.
+                                    </div> -->
                                 </div> 
                             </div>
                             <label for="customRange2">Rango de Precios</label>  
